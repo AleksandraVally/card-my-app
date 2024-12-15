@@ -1,0 +1,244 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Общие стили для всего документа */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #999;
+    background-color: #c6b5fd;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom right, #b6a0fe, #eec6ff);
+    background-size: 20px 20px, 20px 20px, cover;
+    cursor: url('/assets/Атом2.png'), auto;
+    overflow-y: auto;
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #17135a88;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    color: #210045;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+.top-right-link {
+    font-family: 'Snell Roundhand', cursive;
+    position: absolute;
+    top: 30px;
+    right: 90px;
+    color: #513493;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-right-link:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #333;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #34014f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    animation: fadeIn 0.3s ease-out;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1em;
+    color: #fff;
+    background-image: url('/assets/Фон.png');
+    background-size: cover;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #ccc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для основного контента */
+main {
+    flex: 1;
+    padding: 80px 20px 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.wrapper:hover > :not(:hover) {
+    filter: blur(5px);
+    opacity: 0.5;
+}
+
+.card {
+    width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: transform 0.25s ease;
+}
+
+.card img:hover {
+    transform: translate(10px, 10px);
+}
+
+/* Стили для изображения атома */
+.top-left-image {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.top-left-image:hover {
+    transform: rotate(360deg);
+}
+
+/* Стили для изображения Telegram в левом нижнем углу */
+.bottom-left-image {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bottom-left-image:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #21004591;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+

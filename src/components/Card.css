@@ -1,0 +1,69 @@
+main {
+    flex: 1;
+    padding: 80px 20px 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.wrapper:hover > :not(:hover) {
+    filter: blur(5px);
+    opacity: .5;
+}
+
+.card {
+    width: 250px; /* Ширина карточек */
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden; /* Предотвращаем выход элементов за границы карточки */
+    display: flex;
+    flex-direction: column; /* Позволяем карточкам занимать вертикальное пространство */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: transform 0.25s ease;
+}
+
+.card img:hover {
+    transform: translate(10px, 10px);
+}
+
+/* Увеличиваем высоту карточек на мобильных устройствах */
+@media (max-width: 600px) {
+    main {
+        padding: 40px 10px 10px; /* Уменьшаем отступы */
+    }
+
+    .wrapper {
+        display: flex; /* Используем flexbox для компоновки */
+        flex-wrap: wrap; /* Позволяем перенос элементов на следующую строку */
+        justify-content: space-between; /* Распределяем пространство между элементами */
+        padding: 10px; /* Уменьшаем отступы обертки */
+        margin-top: 10px; /* Уменьшаем отступ сверху */
+    }
+
+    .card {
+        flex: 1 1 calc(33.33% - 20px); /* Карточки занимают 1/3 ширины контейнера с учетом отступов */
+        margin: 5px; /* Отступы вокруг каждой карточки */
+        height: auto; /* Высота будет адаптивной */
+        min-height: 200px; /* Устанавливаем минимальную высоту карточек */
+    }
+
+    .card img {
+        width: 100%; /* Изображения заполняют всю ширину карточки */
+        height: auto; /* Сохраняем соотношение сторон */
+    }
+}
+

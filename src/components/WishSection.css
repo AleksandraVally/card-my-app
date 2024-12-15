@@ -1,0 +1,48 @@
+
+.wish-section {
+    font-family: Snell Roundhand, cursive;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.545);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wish-section h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.wish-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #413f3f;
+}
+
+.wish-section button {
+    background-color: #d79fff;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wish-section button:hover {
+    background-color: #594368;
+}
+
+.wish-section p {
+    font-size: 1.5em;
+    color: #d79fff;
+}
