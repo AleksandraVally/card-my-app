@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/card-my-app/static/css/main.ab13be05.css",
+    "main.js": "/card-my-app/static/js/main.0a7191f2.js",
+    "static/js/462.e459eaf6.chunk.js": "/card-my-app/static/js/462.e459eaf6.chunk.js",
+    "static/media/Фон.png": "/card-my-app/static/media/Фон.7127ca5551ad367ca83b.png",
+    "static/media/TG.png": "/card-my-app/static/media/TG.c10a447fc67eedb80b02.png",
+    "static/media/Карта.png": "/card-my-app/static/media/Карта.b0474cbb653d1ff8be18.png",
+    "static/media/Заголовок.png": "/card-my-app/static/media/Заголовок.e0dcfcef1dd71e6ee063.png",
+    "static/media/Атом2.png": "/card-my-app/static/media/Атом2.ce49135ccf75ccf911ea.png",
+    "static/media/FRANKINITY.otf": "/card-my-app/static/media/FRANKINITY.424db02c79553123a614.otf",
+    "index.html": "/card-my-app/index.html",
+    "main.ab13be05.css.map": "/card-my-app/static/css/main.ab13be05.css.map",
+    "main.0a7191f2.js.map": "/card-my-app/static/js/main.0a7191f2.js.map",
+    "462.e459eaf6.chunk.js.map": "/card-my-app/static/js/462.e459eaf6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab13be05.css",
+    "static/js/main.0a7191f2.js"
+  ]
+}
