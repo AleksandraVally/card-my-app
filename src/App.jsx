@@ -11,12 +11,8 @@ import telegramIcon from './assets/TG.png';
 import картаImage from './assets/Карта.png';
 import SnowfallComponent from './components/SnowfallComponent'
 
-
-
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
   const [quizOpen, setQuizOpen] = useState(false);
 
   const startQuiz = () => {
@@ -27,7 +23,6 @@ function App() {
     setQuizOpen(false);
   };
 
-  
   const cardsData = [
     {
       id: 1,
@@ -57,7 +52,6 @@ function App() {
 
   return (
     <div className="App">
-      {}
       <SnowfallComponent />
 
       <Header title="Что меня ждет в 2025?" onStartQuiz={startQuiz} />
@@ -67,7 +61,7 @@ function App() {
           {quizOpen && <QuizModal onClose={closeQuiz} />}
         </section>
 
-        <img src={titleImage} alt="Заголовок" className="title-image" />
+        <img src={titleImage} alt="Заголовок" className="title-image" loading="lazy" />
 
         <section className="wrapper">
           {cardsData.map(card => (
@@ -76,6 +70,7 @@ function App() {
               imageSrc={card.imageSrc}
               altText={card.altText}
               text={card.text}
+              loading="lazy"
             />
           ))}
         </section>
@@ -86,10 +81,10 @@ function App() {
       <aside>
         <small>
           <a href="https://t.me/sladkiipolyraspad" target="_blank" rel="noopener noreferrer">
-            <img src={telegramIcon} alt="Telegram" className="bottom-left-image" />
+            <img src={telegramIcon} alt="Telegram" className="bottom-left-image" loading="lazy" />
           </a>
         </small>
-        <img src={atomImage} alt="Top Left" className="top-left-image" />
+        <img src={atomImage} alt="Top Left" className="top-left-image" loading="lazy" />
         <div id="giftMessage"></div>
       </aside>
 

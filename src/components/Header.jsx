@@ -8,7 +8,7 @@ function Header({ title, onStartQuiz }) {
     <header>
       <h1>{title}</h1>
       <button className="top-right-link" onClick={onStartQuiz}>
-        Начать Новогодний квиз
+        Новогодний Квиз
       </button>
     </header>
   );

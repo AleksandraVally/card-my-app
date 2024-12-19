@@ -33,16 +33,18 @@ header h1 {
 }
 
 .top-right-link {
-    font-family: Snell Roundhand, cursive;
+    font-family: 'Karsten Thin Italic';
+    font-weight: bold;
     position: absolute;
     top: 30px;
     right: 90px;
-    color: #513493;
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(15, 0, 33, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
+    border: 1px solid;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease; 
 }
@@ -50,6 +52,7 @@ header h1 {
     background-color: rgba(255, 255, 255, 1);
     color: #333;
 }
+
 
 @media (max-width: 600px) {
     .top-right-link {
@@ -137,19 +140,27 @@ main {
     transition: transform 0.5s ease;
     cursor: pointer;
     will-change: transform;
-
+    animation: float 3s ease-in-out infinite; /* Add animation */
 }
 
 .top-left-image:hover {
     transform: rotate(360deg);
 }
 
-
 @media (max-width: 600px) {
     .top-left-image {
         width: 100px; 
         top: 250px;   
         left: 18px;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px */
     }
 }
 
@@ -176,83 +187,21 @@ main {
     }
 }
 
-
-
-
-.modal-atom {
-    display: none; 
-    justify-content: center; 
-    align-items: center; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1000; 
+.rotate {
+    animation: spin 1s linear infinite;
 }
 
-.modal-content-atom {
-    background-color: #f2e6ff; 
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px; 
-    width: 90%; 
-    text-align: center;
-    position: relative;
-    font-family: 'Dancing Script', cursive; 
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    animation: fadeIn 0.3s ease-in-out; 
-    background-image: url('Фон.png');
-    background-size: cover;
-}
-
-
-.close-button-atom {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 28px;
-    color: #333;
-    transition: color 0.2s;
-}
-
-.close-button-atom:hover {
-    color: #666; 
-}
-
-@keyframes fadeIn {
+@keyframes spin {
     from {
-        opacity: 0;
-        transform: scale(0.9);
+        transform: rotate(0deg);
     }
     to {
-        opacity: 1;
-        transform: scale(1);
+        transform: rotate(360deg);
     }
 }
 
-.modal-message {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
 
-.modal-button {
-    background-color: #410166;
-    color: #ffffff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
 
-.modal-button:hover {
-    background-color: #e4b0fa;
-}
 
 
 
